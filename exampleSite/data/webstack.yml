@@ -28,15 +28,15 @@
       url: https://github.com/
       description: GitHub 开源社区。 
     - title: gemini
-      logo: gemini.jpg
+      logo: gemini.png
       url: https://gemini.google.com/
       description: google gemini。
     - title: grok
-      logo: grok.jpg
+      logo: grok.png
       url: https://grok.com/
       description: grok。
     - title: ChatGPT
-      logo: chatgpt.jpg
+      logo: chatgpt.png
       url: https://chatgpt.com/
       description: chatgpt
 
