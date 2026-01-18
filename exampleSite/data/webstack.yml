@@ -43,7 +43,19 @@
       logo: notebooklm.png
       url: https://notebooklm.google.com/
       description: notebooklm
-
+    - title: greasy fork
+      logo: Greasy Fork.png
+      url: https://gf.qytechs.cn/zh-CN/scripts
+      description: greasy fork镜像
+    - title: 抖音
+      logo: 抖音.png
+      url: https://www.douyin.com/
+      description: 抖音
+    - title: xlink
+      logo: 梯子.png
+      url: https://www.xlinkworld.net/
+      description: 梯子🪜
+      
 
 - taxonomy: 科研办公
   icon: fas fa-flask fa-lg
