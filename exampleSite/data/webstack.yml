@@ -1,6 +1,6 @@
 ---
 
-- taxonomy: 常用推荐
+- taxonomy: 常用网站
   icon: far fa-star
   links: 
     - title: gmail
@@ -57,35 +57,53 @@
       description: 梯子🪜
       
 
-- taxonomy: 科研办公
+- taxonomy: AI相关
   icon: fas fa-flask fa-lg
   list:
-    - term: 生物信息
+    - term: AI整合网站
       links:
-        - title: NCBI
-          logo: ncbi.jpg
-          url: https://www.ncbi.nlm.nih.gov/
-          description: National Center for Biotechnology Information.
-        - title: Bioconda
-          logo: bioconda.jpg
-          url: https://anaconda.org/bioconda/
-          description: "Bioconda :: Anaconda.org."
-        - title: CPAN
-          logo: cpan.jpg
-          url: https://metacpan.org/
-          description: Search the CPAN.
-        - title: Galaxy Project
-          logo: galaxy_project.png
-          url: https://galaxyproject.org/
-          description: Galaxy Community Hub.
-        - title: R Project
-          logo: r-project.jpg
-          url: https://www.r-project.org/
-          description: https://www.r-project.org
-        - title: Bioconductor
-          logo: bioconductor.jpg
-          url: http://www.bioconductor.org/
-          description: http://www.bioconductor.org
+        - title: grsai
+          logo: grsai.png
+          url: https://grsai.com/zh
+          description: grsai
+        - title: queryany
+          logo: query.png
+          url: https://www.queryany.com/
+          description: 好用推荐
+        - title: askmany
+          logo: askmany.png
+          url: https://askmany.cn/login
+          description: askmany
+        - title: 边界AI
+          logo: 边界.png
+          url: https://yyai8.com/
+          description: 边界AI
+        - title: ShareNext
+          logo: ShareNext.png
+          url: https://www.nezhasoft.cloud/home
+          description: 让全世界最顶级人工智能为你打工.
+    - term: 国内AI网站
+      links:
+        - title: DeepSeek
+          logo: deepseek.png
+          url: https://chat.deepseek.com/
+          description: DeepSeek深度求索
+        - title: 可灵AI
+          logo: 可灵.png
+          url: https://app.klingai.com/cn/
+          description: 可灵AI
+        - title: 即梦AI
+          logo: 即梦AI.jpg
+          url: https://jimeng.jianying.com/ai-tool/home
+          description: 即梦AI
+        - title: liblib
+          logo: liblib.png
+          url: https://www.liblib.art/
+          description: liblib
+        - title: reomve
+          logo: remove.png
+          url: https://www.remove.bg/zh
+          description: 消除图片背景
     - term: 云服务器
       links:
         - title: 阿里云
