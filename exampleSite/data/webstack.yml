@@ -88,6 +88,14 @@
           logo: deepseek.png
           url: https://chat.deepseek.com/
           description: DeepSeek深度求索
+        - title: 豆包
+          logo: 豆包.png
+          url: https://www.doubao.com/chat/
+          description: 聪明的豆包
+        - title: KIMI
+          logo: KIMI.png
+          url: https://www.kimi.com/zh/
+          description: 聪明的KIMI
         - title: 可灵AI
           logo: 可灵.png
           url: https://app.klingai.com/cn/
