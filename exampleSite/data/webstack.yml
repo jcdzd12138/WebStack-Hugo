@@ -39,6 +39,10 @@
       logo: chatgpt.png
       url: https://chatgpt.com/
       description: chatgpt
+      - title: notebooklm
+      logo: notebooklm.png
+      url: https://notebooklm.google.com/
+      description: notebooklm
 
 
 - taxonomy: 科研办公
