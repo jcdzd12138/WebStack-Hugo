@@ -82,6 +82,10 @@
           logo: ShareNext.png
           url: https://www.nezhasoft.cloud/home
           description: 让全世界最顶级人工智能为你打工.
+        - title: lmarena
+          logo: im.png
+          url: https://lmarena.ai/zh
+          description: 需要魔法.
     - term: 国内AI网站
       links:
         - title: DeepSeek
