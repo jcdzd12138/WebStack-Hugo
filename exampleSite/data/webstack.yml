@@ -116,6 +116,14 @@
           logo: remove.png
           url: https://www.remove.bg/zh
           description: 消除图片背景
+    - term: 好用的AI工具
+      links:
+        - title: 人体姿态截图
+          logo: 人体.png
+          url: https://webapp.magicposer.com/
+          description: 人体姿态截图，用于生成动作
+          
+          
 
       
 - taxonomy: 悠闲娱乐
