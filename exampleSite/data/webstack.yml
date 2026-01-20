@@ -142,27 +142,27 @@
           
 
       
-- taxonomy: 悠闲娱乐
+- taxonomy: 土建设计
   icon: fas fa-film fa-lg
   list:
-    - term: 影音视频
+    - term: 软件下载
       links:
-        - title: 腾讯视频
-          logo: 腾讯视频.png
-          url: http://v.qq.com/
-          description: 腾讯视频，海量视频在线观看。
-        - title: 优酷
-          logo: 优酷.png
-          url: http://www.youku.com/
-          description: 优酷 - 这个世界很酷。
-        - title: 爱奇艺
-          logo: 爱奇艺.png
-          url: https://www.iqiyi.com/
-          description: 爱奇艺在线视频。
-        - title: 哔哩哔哩
-          logo: 哔哩哔哩.png
-          url: https://www.bilibili.com/
-          description: Bilibili 视频弹幕网站。
+        - title: 欣辰软件
+          logo: 软件下载.png
+          url: http://ruanjian.seosichuan.cn/
+          description: 欣辰软件
+        - title: 软仓
+          logo: 仓库.png
+          url: https://www.ruancang.net/
+          description: 软仓
+        - title: 软件宝库
+          logo: 宝库.png
+          url: https://my.feishu.cn/base/ZBmDbYu57aPvJwsNgk3c2LWpnwe?table=tbli32fkmWsThsL6&view=vewyeuFTQj
+          description: 软件宝库
+        - title: 无忧 发布页
+          logo: 无忧.png
+          url: https://www.5151cad.top/
+          description: 可买狗
         - title: QQ 音乐
           logo: QQ音乐.jpg
           url: https://y.qq.com/
