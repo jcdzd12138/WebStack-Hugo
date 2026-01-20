@@ -148,7 +148,7 @@
 - taxonomy: 土建设计
   icon: fas fa-film fa-lg
   list:
-    - term: 软件下载
+    - term: 工作软件下载
       links:
         - title: 欣辰软件
           logo: 软件下载.png
