@@ -116,10 +116,6 @@
           logo: liblib.png
           url: https://www.liblib.art/
           description: liblib
-        - title: reomve
-          logo: remove.png
-          url: https://www.remove.bg/zh
-          description: 消除图片背景
     - term: AI工具
       links:
         - title: 人体姿态截图
@@ -138,7 +134,14 @@
           logo: 超市.png
           url: https://novelai.dev/
           description: 提示词组合
-       
+        - title: 灵猫去水印
+          logo: 黄猫.png
+          url: https://clearcat.lingxiangtools.top/
+          description: 去水印
+        - title: reomve
+          logo: remove.png
+          url: https://www.remove.bg/zh
+          description: 消除图片背景
           
 
       
@@ -193,6 +196,40 @@
           logo: 资源 41.png
           url: https://www.webfree.net/home
           description: 协筑资源
+    - term: 培训上课
+      links:
+        - title: 成都人力资源
+          logo: 人力资源.jpg
+          url: http://cdhrss.chengdu.gov.cn/
+          description: 成都人力资源
+        - title: 四川继教
+          logo: 继续教育.jpg
+          url: https://www.sedu.net/student/#/search
+          description: 四川继续教育
+        - title: 成都继教
+          logo: 成都继教.png
+          url: https://www.cdzjjj.cn/
+          description: 成都继续教育
+        - title: 人事考试
+          logo: 考试中心.png
+          url: http://www.cpta.com.cn/
+          description: 中国人事考试网
+        - title: 设计得到
+          logo: 室内设计.png
+          url: https://www.shejidedao.com/?path=%2F
+          description: 学习室内设计
+        - title: 峰源学习中心
+          logo: 山峰-copy.png
+          url: https://fy.jingzhufengyuan.cn/bought
+          description: 峰源学习中心
+        - title: 构力学堂
+          logo: PKPM.png
+          url: https://edu.pkpm.cn/
+          description: pkpm学习中心
+        - title: 海豚知道
+          logo: sharpicons_Orca.png
+          url: https://learn.htknow.com/seriesDetail?id=4028674&product_type=5&isOver=0&bind_order_id=43054539
+          description: 买的su课
    
       
 - taxonomy: 素材资源
