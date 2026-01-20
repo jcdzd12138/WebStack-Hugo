@@ -55,6 +55,10 @@
       logo: 梯子.png
       url: https://www.xlinkworld.net/
       description: 梯子
+    - title: deepl
+      logo: 翻译.png
+      url: https://www.deepl.com/zh/translator
+      description: 翻译网站
       
 
 - taxonomy: AI相关
@@ -116,7 +120,7 @@
           logo: remove.png
           url: https://www.remove.bg/zh
           description: 消除图片背景
-    - term: 好用的AI工具
+    - term: AI工具
       links:
         - title: 人体姿态截图
           logo: 人体.png
@@ -130,6 +134,11 @@
           logo: email_6764841.png
           url: https://docs.qq.com/sheet/DSUVLbHpBV1BVRFVC?tab=BB08J2
           description: XWOW学习资源文档
+        - title: 标签超市
+          logo: 超市.png
+          url: https://novelai.dev/
+          description: 提示词组合
+       
           
 
       
