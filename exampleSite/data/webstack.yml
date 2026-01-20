@@ -167,21 +167,21 @@
           url: https://www.5151cad.top/
           description: 可买狗
         - title: 我爱分享网
-          logo: 分享.jpg
+          logo: 分享.png
           url: http://www.zhanshaoyi.com/
           description: 我爱分享网
         - title: 软件智库
-          logo: 微信公众号.jpg
+          logo: 微信公众号.png
           url: https://mp.weixin.qq.com/s/WIaG_Kx-qZqA74uux_CZxA
           description: 软件智库公众号
     - term: 规范图集
       links:
         - title: 砂浆帮
-          logo: icon_砂浆.jpg
+          logo: icon_砂浆.png
           url: https://www.drymt.com/
           description: 好用 第一选择
         - title: 学兔兔
-          logo: 兔子.jpg
+          logo: 兔子.png
           url: http://www.bzfxw.com/
           description: 学兔兔
         - title: 标准库
@@ -199,11 +199,11 @@
     - term: 培训上课
       links:
         - title: 成都人力资源
-          logo: 人力资源.jpg
+          logo: 人力资源.png
           url: http://cdhrss.chengdu.gov.cn/
           description: 成都人力资源
         - title: 四川继教
-          logo: 继续教育.jpg
+          logo: 继续教育.png
           url: https://www.sedu.net/student/#/search
           description: 四川继续教育
         - title: 成都继教
