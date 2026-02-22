@@ -11,9 +11,17 @@
       logo: qq邮箱.png
       url: http://mail.qq.com/
       description: 腾讯 QQ 邮箱。
+    - title: evai建筑大师
+      logo: 建筑.png
+      url: https://www.openevai.com/
+      description: 建筑方案ai一体站
     - title: 语雀
       logo: 语雀.png
       url: https://www.yuque.com/dashboard
+      description: 个人知识库
+    - title: 飞书
+      logo: 飞书.png
+      url: https://mcn24cd0osoc.feishu.cn/drive/home/
       description: 个人知识库
     - title: Bilibili
       logo: 哔哩哔哩.png
@@ -63,10 +71,14 @@
       logo: 翻译.png
       url: https://www.deepl.com/zh/translator
       description: 翻译网站
-    - title: X
+    - title: X--推特
       logo: tuite-copy.png
       url: https://x.com/home
-      description: X
+      description: 外版微博
+    - title: 机场大全
+      logo: 机场接送.png
+      url: https://www.duyaoss.com/
+      description: 机场测速和推荐
 
       
 
