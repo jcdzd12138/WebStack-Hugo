@@ -59,6 +59,10 @@
       logo: 翻译.png
       url: https://www.deepl.com/zh/translator
       description: 翻译网站
+    - title: X
+      logo: tuite-copy.png
+      url: https://x.com/home
+      description: X
       
 
 - taxonomy: AI相关
