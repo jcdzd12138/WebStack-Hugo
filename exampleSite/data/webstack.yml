@@ -11,6 +11,10 @@
       logo: qq邮箱.png
       url: http://mail.qq.com/
       description: 腾讯 QQ 邮箱。
+    - title: 语雀
+      logo: 语雀.png
+      url: https://www.yuque.com/dashboard
+      description: 个人知识库
     - title: Bilibili
       logo: 哔哩哔哩.png
       url: https://www.bilibili.com/
@@ -63,6 +67,7 @@
       logo: tuite-copy.png
       url: https://x.com/home
       description: X
+
       
 
 - taxonomy: AI相关
