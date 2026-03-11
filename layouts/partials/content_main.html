@@ -77,9 +77,9 @@
 	    <!--常用推荐-->
             <!-- {{ .taxonomy }} -->
             <div class="d-flex flex-fill">
-                <h4 class="text-gray category-title" style="cursor: pointer; display: flex; align-items: center;">
-                    <i class="fas fa-chevron-down toggle-icon" style="margin-right: 7px; font-size: 12px; transition: transform 0.3s;"></i>
-    {{ .taxonomy }}
+                <h4 class="text-gray text-lg mb-4">
+                    <i class="site-tag iconfont icon-tag icon-lg mr-1" id="{{ md5 .taxonomy }}"></i>
+                    {{ .taxonomy }}
                 </h4>
                 <!--div class="flex-fill"></div>
                 <a class='btn-move text-xs' href='#'>more+</a-->
