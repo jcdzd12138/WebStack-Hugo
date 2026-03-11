@@ -119,5 +119,23 @@ function switchNightMode(){
     }
 }
 </script>
+
+<script>
+$(document).ready(function(){
+    // 专门针对你刚才定义的 category-title 类
+    $(".category-title").click(function(){
+        // 这里的 .next(".row") 是因为卡片通常被包裹在 class 为 row 的 div 里
+        $(this).next(".row").slideToggle(300);
+        
+        // 旋转箭头的动画
+        const icon = $(this).find(".toggle-icon");
+        if (icon.hasClass("rotate-90")) {
+            icon.removeClass("rotate-90").css('transform', 'rotate(0deg)');
+        } else {
+            icon.addClass("rotate-90").css('transform', 'rotate(-90deg)');
+        }
+    });
+});
+</script>
 </body>
 </html>
