@@ -125,50 +125,63 @@ function switchNightMode(){
 <script type="text/javascript">
 $(document).ready(function(){
     
-    // 1. 逻辑：点击目录标题手动折叠/展开
+    // 1. 逻辑：点击目录标题手动折叠/展开 (保持现状)
     $(document).on('click', '.taxonomy-title', function() {
         var content = $(this).closest('.d-flex').next(".taxonomy-content");
         toggleTaxonomy(content, $(this).find(".toggle-icon"));
     });
 
-    // 2. 逻辑：修复侧边栏点击无效问题
+    // 2. 逻辑：侧边栏点击逻辑优化
     $(document).on('click', '.sidebar-item a, a.smooth', function() {
         var href = $(this).attr('href');
-        // 如果点击的是站内锚点链接（如 #常用网站）
         if (href && href.startsWith('#')) {
-            expandTarget(href);
+            expandOnlyTarget(href);
         }
     });
 
-    // 3. 逻辑：处理页面初始化时带有锚点的情况
+    // 3. 逻辑：处理初始化锚点
     if (window.location.hash) {
-        expandTarget(window.location.hash);
+        expandOnlyTarget(window.location.hash);
     }
 
-    // --- 工具函数：根据 ID 自动展开目标分类 ---
-    function expandTarget(hashId) {
+    // --- 核心工具函数：仅展开目标并折叠其他 ---
+    function expandOnlyTarget(hashId) {
         var targetAnchor = $(hashId); 
         if (targetAnchor.length) {
-            // 向上寻找该锚点所属的分类内容包裹层
-            var content = targetAnchor.closest('.taxonomy-group').find(".taxonomy-content");
-            var titleIcon = targetAnchor.closest('.taxonomy-group').find(".toggle-icon");
+            // 定位目标所属的组
+            var targetGroup = targetAnchor.closest('.taxonomy-group');
             
-            // 如果该分类当前是隐藏的，则强制展开
-            if (content.length && !content.is(':visible')) {
-                content.slideDown(350);
-                titleIcon.css('transform', 'rotate(0deg)'); // 箭头恢复向下
-            }
+            // 💡 核心步骤：遍历所有分类组执行“排他性”操作
+            $(".taxonomy-group").each(function() {
+                var $this = $(this);
+                var titleText = $this.find(".taxonomy-title").text().trim();
+                var content = $this.find(".taxonomy-content");
+                var icon = $this.find(".toggle-icon");
+
+                // 排除逻辑：如果是“常用网站”或者是当前点击的目标，则不执行折叠
+                if (titleText === "常用网站" || $this.is(targetGroup)) {
+                    // 如果是目标且当前隐藏，则展开
+                    if ($this.is(targetGroup) && !content.is(':visible')) {
+                        content.slideDown(350);
+                        icon.css('transform', 'rotate(0deg)');
+                    }
+                } else {
+                    // 其他所有目录一律折叠
+                    if (content.is(':visible')) {
+                        content.slideUp(350);
+                        icon.css('transform', 'rotate(-90deg)');
+                    }
+                }
+            });
         }
     }
 
-    // --- 工具函数：切换折叠/展开状态 ---
+    // --- 工具函数：切换折叠状态 ---
     function toggleTaxonomy(content, icon) {
         content.slideToggle(350);
         if (content.is(":visible")) {
-            // 即将关闭
             icon.css('transform', 'rotate(-90deg)');
         } else {
-            // 即将开启
             icon.css('transform', 'rotate(0deg)');
         }
     }
