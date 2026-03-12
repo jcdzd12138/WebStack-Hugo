@@ -16,108 +16,133 @@ var theme = {"ajaxurl":"","addico":"https:\/\/nav.baidu.cn\/wp-content\/themes\/
 {{ else }}
 <script type='text/javascript' src='{{ absURL "assets/js/app-mini.js" }}' id='appmini-js'></script>
 {{ end }}
+
 <script type="text/javascript">
-    $(document).ready(function(){
-        var siteWelcome = $('#loading');
-        siteWelcome.addClass('close');
-        setTimeout(function() {
-            siteWelcome.remove();
-        }, 600);
-    });
+    $(document).ready(function(){
+        var siteWelcome = $('#loading');
+        siteWelcome.addClass('close');
+        setTimeout(function() {
+            siteWelcome.remove();
+        }, 600);
+    });
 </script>
-<script>        
-    $(document).ready(function(){
-        setTimeout(function () {
-            if ($('a.smooth[href="' + window.location.hash + '"]')[0]) {
-                $('a.smooth[href="' + window.location.hash + '"]').click();
-            }else if (window.location.hash != '') {
-                $("html, body").animate({
-                    scrollTop: $(window.location.hash).offset().top - 90
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-            }
-        }, 300);
-        $(document).on('click','a.smooth',function(ev) {
-            if($('#sidebar').hasClass('show') && !$(this).hasClass('change-href')){
-                $('#sidebar').modal('toggle');
-            }
-            if($(this).attr("href").substr(0, 1) == "#"){
-                $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top - 90
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-            }
-            if($(this).hasClass('go-search-btn')){
-                $('#search-text').focus();
-            }
-            if(!$(this).hasClass('change-href')){
-                var menu =  $("a"+$(this).attr("href"));
-                menu.click();
-                toTarget(menu.parent().parent(),true,true);
-            }
-        });
-        $(document).on('click','a.tab-noajax',function(ev) {
-            var url = $(this).data('link');
-            if(url)
-                $(this).parents('.d-flex.flex-fill.flex-tab').children('.btn-move.tab-move').show().attr('href', url);
-            else
-                $(this).parents('.d-flex.flex-fill.flex-tab').children('.btn-move.tab-move').hide();
-        });
-        
-    });
+
+<script>        
+    $(document).ready(function(){
+        setTimeout(function () {
+            if ($('a.smooth[href="' + window.location.hash + '"]')[0]) {
+                $('a.smooth[href="' + window.location.hash + '"]').click();
+            }else if (window.location.hash != '') {
+                $("html, body").animate({
+                    scrollTop: $(window.location.hash).offset().top - 90
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+            }
+        }, 300);
+        $(document).on('click','a.smooth',function(ev) {
+            if($('#sidebar').hasClass('show') && !$(this).hasClass('change-href')){
+                $('#sidebar').modal('toggle');
+            }
+            if($(this).attr("href").substr(0, 1) == "#"){
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top - 90
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+            }
+            if($(this).hasClass('go-search-btn')){
+                $('#search-text').focus();
+            }
+            if(!$(this).hasClass('change-href')){
+                var menu =  $("a"+$(this).attr("href"));
+                menu.click();
+                toTarget(menu.parent().parent(),true,true);
+            }
+        });
+        $(document).on('click','a.tab-noajax',function(ev) {
+            var url = $(this).data('link');
+            if(url)
+                $(this).parents('.d-flex.flex-fill.flex-tab').children('.btn-move.tab-move').show().attr('href', url);
+            else
+                $(this).parents('.d-flex.flex-fill.flex-tab').children('.btn-move.tab-move').hide();
+        });
+        
+    });
 </script>
 
 <script>
 //夜间(日间)模式
 (function(){
-    if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
-        if(new Date().getHours() > 22 || new Date().getHours() < 6){
-            document.body.classList.remove('io-black-mode');
-            document.body.classList.add('io-grey-mode');
-            document.cookie = "night=1;path=/";
-            console.log('夜间模式开启');
-        }else{
-            document.body.classList.remove('night');
-            document.cookie = "night=0;path=/";
-            console.log('夜间模式关闭');
-        }
-    }else{
-        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-        if(night == '0'){
-            document.body.classList.remove('night');
-        }else if(night == '1'){
-            document.body.classList.add('night');
-        }
-    }
+    if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
+        if(new Date().getHours() > 22 || new Date().getHours() < 6){
+            document.body.classList.remove('io-black-mode');
+            document.body.classList.add('io-grey-mode');
+            document.cookie = "night=1;path=/";
+            console.log('夜间模式开启');
+        }else{
+            document.body.classList.remove('night');
+            document.cookie = "night=0;path=/";
+            console.log('夜间模式关闭');
+        }
+    }else{
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+        if(night == '0'){
+            document.body.classList.remove('night');
+        }else if(night == '1'){
+            document.body.classList.add('night');
+        }
+    }
 })();
 //夜间(日间)模式切换
-$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageL }})");   //默认浅色背景
+$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageL }})");   //默认浅色背景
 function switchNightMode(){
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if(night == '0'){
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    if(night == '0'){
 	$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageL }})");
-        document.body.classList.remove('io-grey-mode');
-        document.body.classList.add('io-black-mode');
-        document.cookie = "night=1;path=/"
-        console.log(' ');
-        $(".switch-dark-mode").attr("data-original-title","日间模式");
-        $(".mode-ico").removeClass("icon-night");
-        $(".mode-ico").addClass("icon-light");
-    }else{
+        document.body.classList.remove('io-grey-mode');
+        document.body.classList.add('io-black-mode');
+        document.cookie = "night=1;path=/"
+        console.log(' ');
+        $(".switch-dark-mode").attr("data-original-title","日间模式");
+        $(".mode-ico").removeClass("icon-night");
+        $(".mode-ico").addClass("icon-light");
+    }else{
 	$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageD }})")
-        document.body.classList.remove('io-black-mode');
-        document.body.classList.add('io-grey-mode');
-        document.cookie = "night=0;path=/"
-        console.log(' ');
-        $(".switch-dark-mode").attr("data-original-title","夜间模式");
-        $(".mode-ico").removeClass("icon-light");
-        $(".mode-ico").addClass("icon-night");
-    }
+        document.body.classList.remove('io-black-mode');
+        document.body.classList.add('io-grey-mode');
+        document.cookie = "night=0;path=/"
+        console.log(' ');
+        $(".switch-dark-mode").attr("data-original-title","夜间模式");
+        $(".mode-ico").removeClass("icon-light");
+        $(".mode-ico").addClass("icon-night");
+    }
 }
 </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    // 监听具有 taxonomy-title 类的大目录标题点击事件
+    $(".taxonomy-title").click(function(){
+        // 1. 切换其对应的 taxonomy-content 容器的显示/隐藏状态
+        // 逻辑：点击标题，找到它所在的 d-flex 父容器，再找到该父容器紧随其后的 taxonomy-content 容器
+        $(this).closest('.d-flex').next(".taxonomy-content").slideToggle(350);
+        
+        // 2. 处理左侧箭头的旋转动画效果
+        const icon = $(this).find(".toggle-icon");
+        // 检查当前是否已经旋转
+        if (icon.css('transform') === 'none' || icon.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
+            // 如果是初始状态，则顺时针旋转 -90 度（指向右侧），表示已折叠
+            icon.css('transform', 'rotate(-90deg)');
+        } else {
+            // 否则恢复初始状态（向下），表示已展开
+            icon.css('transform', 'rotate(0deg)');
+        }
+    });
+});
+</script>
+
 </body>
 </html>
