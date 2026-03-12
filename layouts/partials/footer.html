@@ -125,10 +125,20 @@ function switchNightMode(){
 <script type="text/javascript">
 $(document).ready(function(){
     
-    // 1. 逻辑：点击目录标题手动折叠/展开 (保持现状)
+    // 1. 逻辑：点击目录标题手动折叠/展开
     $(document).on('click', '.taxonomy-title', function() {
         var content = $(this).closest('.d-flex').next(".taxonomy-content");
-        toggleTaxonomy(content, $(this).find(".toggle-icon"));
+        var icon = $(this).find(".toggle-icon");
+        
+        content.slideToggle(350);
+        
+        // 💡 修正点：如果内容当前是可见的，说明即将收起 -> 旋转至 -90度（向右）
+        // 如果内容当前是隐藏的，说明即将展开 -> 恢复 0度（向下）
+        if (content.is(":visible")) {
+            icon.css('transform', 'rotate(-90deg)'); 
+        } else {
+            icon.css('transform', 'rotate(0deg)');
+        }
     });
 
     // 2. 逻辑：侧边栏点击逻辑优化
@@ -144,45 +154,32 @@ $(document).ready(function(){
         expandOnlyTarget(window.location.hash);
     }
 
-    // --- 核心工具函数：仅展开目标并折叠其他 ---
+    // --- 工具函数：仅展开目标并折叠其他 ---
     function expandOnlyTarget(hashId) {
         var targetAnchor = $(hashId); 
         if (targetAnchor.length) {
-            // 定位目标所属的组
             var targetGroup = targetAnchor.closest('.taxonomy-group');
             
-            // 💡 核心步骤：遍历所有分类组执行“排他性”操作
             $(".taxonomy-group").each(function() {
                 var $this = $(this);
                 var titleText = $this.find(".taxonomy-title").text().trim();
                 var content = $this.find(".taxonomy-content");
                 var icon = $this.find(".toggle-icon");
 
-                // 排除逻辑：如果是“常用网站”或者是当前点击的目标，则不执行折叠
                 if (titleText === "常用网站" || $this.is(targetGroup)) {
-                    // 如果是目标且当前隐藏，则展开
-                    if ($this.is(targetGroup) && !content.is(':visible')) {
+                    // 💡 展开目标或保持常用网站展开
+                    if (!content.is(':visible')) {
                         content.slideDown(350);
-                        icon.css('transform', 'rotate(0deg)');
                     }
+                    icon.css('transform', 'rotate(0deg)'); // 展开状态：向下
                 } else {
-                    // 其他所有目录一律折叠
+                    // 💡 折叠其他
                     if (content.is(':visible')) {
                         content.slideUp(350);
-                        icon.css('transform', 'rotate(-90deg)');
                     }
+                    icon.css('transform', 'rotate(-90deg)'); // 折叠状态：向右
                 }
             });
-        }
-    }
-
-    // --- 工具函数：切换折叠状态 ---
-    function toggleTaxonomy(content, icon) {
-        content.slideToggle(350);
-        if (content.is(":visible")) {
-            icon.css('transform', 'rotate(-90deg)');
-        } else {
-            icon.css('transform', 'rotate(0deg)');
         }
     }
 });
