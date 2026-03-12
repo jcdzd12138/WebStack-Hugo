@@ -5,7 +5,8 @@
             <div class="d-flex flex-fill">
                 <h4 class="text-gray text-lg mb-4 taxonomy-title" style="cursor: pointer; display: flex; align-items: center;">
                     <i class="fas fa-chevron-down toggle-icon mr-2" 
-                       style="font-size: 14px; transition: transform 0.3s; {{ if ne .taxonomy "常用网站" }}transform: rotate(-90deg);{{ end }}"></i>
+                       style="font-size: 14px; transition: transform 0.3s ease; {{ if ne .taxonomy "常用网站" }}transform: rotate(-90deg);{{ end }}"></i>
+                    
                     <i class="site-tag iconfont icon-tag icon-lg mr-1" id="{{ md5 .taxonomy }}"></i>
                     {{ .taxonomy }}
                 </h4>
