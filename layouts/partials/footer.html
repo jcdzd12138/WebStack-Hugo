@@ -127,21 +127,25 @@ $(document).ready(function(){
     
     // 1. 逻辑：点击目录标题手动折叠/展开
     $(document).on('click', '.taxonomy-title', function() {
-        var content = $(this).closest('.d-flex').next(".taxonomy-content");
-        var icon = $(this).find(".toggle-icon");
+        var $group = $(this).closest('.taxonomy-group');
+        var $content = $group.find(".taxonomy-content");
+        var $icon = $(this).find(".toggle-icon");
         
-        content.slideToggle(350);
+        // 执行切换动画
+        $content.slideToggle(350);
         
-        // 💡 修正点：如果内容当前是可见的，说明即将收起 -> 旋转至 -90度（向右）
-        // 如果内容当前是隐藏的，说明即将展开 -> 恢复 0度（向下）
-        if (content.is(":visible")) {
-            icon.css('transform', 'rotate(-90deg)'); 
+        // 💡 修复点：直接通过检查是否有旋转来判断当前状态
+        // 如果当前是转了-90度（向右），说明我们要打开它 -> 转回0度（向下）
+        var currentTransform = $icon.css('transform');
+        if (currentTransform.indexOf('matrix') > -1 && currentTransform !== 'none' && currentTransform !== 'matrix(1, 0, 0, 1, 0, 0)') {
+            $icon.css('transform', 'rotate(0deg)'); 
         } else {
-            icon.css('transform', 'rotate(0deg)');
+            // 否则，说明我们要收起它 -> 转到-90度（向右）
+            $icon.css('transform', 'rotate(-90deg)');
         }
     });
 
-    // 2. 逻辑：侧边栏点击逻辑优化
+    // 2. 逻辑：侧边栏点击逻辑 (保持独占模式)
     $(document).on('click', '.sidebar-item a, a.smooth', function() {
         var href = $(this).attr('href');
         if (href && href.startsWith('#')) {
@@ -163,21 +167,19 @@ $(document).ready(function(){
             $(".taxonomy-group").each(function() {
                 var $this = $(this);
                 var titleText = $this.find(".taxonomy-title").text().trim();
-                var content = $this.find(".taxonomy-content");
-                var icon = $this.find(".toggle-icon");
+                var $content = $this.find(".taxonomy-content");
+                var $icon = $this.find(".toggle-icon");
 
                 if (titleText === "常用网站" || $this.is(targetGroup)) {
-                    // 💡 展开目标或保持常用网站展开
-                    if (!content.is(':visible')) {
-                        content.slideDown(350);
+                    if (!$content.is(':visible')) {
+                        $content.slideDown(350);
                     }
-                    icon.css('transform', 'rotate(0deg)'); // 展开状态：向下
+                    $icon.css('transform', 'rotate(0deg)'); // 向下
                 } else {
-                    // 💡 折叠其他
-                    if (content.is(':visible')) {
-                        content.slideUp(350);
+                    if ($content.is(':visible')) {
+                        $content.slideUp(350);
                     }
-                    icon.css('transform', 'rotate(-90deg)'); // 折叠状态：向右
+                    $icon.css('transform', 'rotate(-90deg)'); // 向右
                 }
             });
         }
