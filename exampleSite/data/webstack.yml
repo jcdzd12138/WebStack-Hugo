@@ -3,6 +3,10 @@
 - taxonomy: 常用网站
   icon: far fa-star
   links: 
+    - title: 我的笔记库
+      logo: 笔记.png
+      url: https://dzdnnotes.pages.dev
+      description: 我的笔记库。 
     - title: cloudflare
       logo: CloudflareCDN.png
       url: https://dash.cloudflare.com/
