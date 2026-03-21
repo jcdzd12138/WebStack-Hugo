@@ -4,7 +4,7 @@
   icon: far fa-star
   links: 
     - title: cloudflare
-      logo: cloudflare_.png
+      logo: CloudflareCDN.png
       url: https://dash.cloudflare.com/
       description: 网站部署管理。  
     - title: gmail
