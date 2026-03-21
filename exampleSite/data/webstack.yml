@@ -15,6 +15,10 @@
       logo: qq邮箱.png
       url: http://mail.qq.com/
       description: 腾讯 QQ 邮箱。
+    - title: 新闻聚合
+      logo: 新闻.png
+      url: https://newsknow.pages.dev
+      description: 新闻聚合。
     - title: evai建筑大师
       logo: 建筑.png
       url: https://www.openevai.com/
