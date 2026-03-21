@@ -3,10 +3,6 @@
 - taxonomy: 常用网站
   icon: far fa-star
   links: 
-    - title: 新闻聚合
-      logo: 新闻.png
-      url: https://newsknow.pages.dev
-      description: 新闻聚合。
     - title: gmail
       logo: gmail.png
       url: https://mail.google.com/mail/u/0/#inbox
@@ -17,7 +13,7 @@
       description: 腾讯 QQ 邮箱。
     - title: 新闻聚合
       logo: 新闻.png
-      url: https://newsknow.pages.dev
+      url: https://dzdnews.pages.dev
       description: 新闻聚合。
     - title: evai建筑大师
       logo: 建筑.png
