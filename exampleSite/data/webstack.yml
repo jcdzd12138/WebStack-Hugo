@@ -3,6 +3,10 @@
 - taxonomy: 常用网站
   icon: far fa-star
   links: 
+    - title: 每日聚合新闻
+      logo: 新闻.png
+      url: https://newsknow.pages.dev
+      description: 新闻聚合
     - title: gmail
       logo: gmail.png
       url: https://mail.google.com/mail/u/0/#inbox
