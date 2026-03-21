@@ -3,7 +3,7 @@
 - taxonomy: 常用网站
   icon: far fa-star
   links: 
-    - title: 每日聚合新闻
+    - title: 聚合新闻
       logo: 新闻.png
       url: https://newsknow.pages.dev
       description: 新闻聚合
