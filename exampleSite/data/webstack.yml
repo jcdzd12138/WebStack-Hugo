@@ -11,6 +11,10 @@
       logo: CloudflareCDN.png
       url: https://dash.cloudflare.com/
       description: 网站部署管理。  
+    - title: CD2
+      logo: Cloud_Drive_Online.png
+      url: http://localhost:19798/
+      description: 网盘本地挂载。
     - title: gmail
       logo: gmail.png
       url: https://mail.google.com/mail/u/0/#inbox
