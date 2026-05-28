@@ -141,6 +141,10 @@
           logo: KIMI.png
           url: https://www.kimi.com/zh/
           description: 聪明的KIMI
+        - title: 千问
+          logo: Tongyi-Qianwen.png
+          url: https://www.qianwen.com/
+          description: 聪明的QWEN
         - title: 可灵AI
           logo: 可灵.png
           url: https://app.klingai.com/cn/
@@ -217,6 +221,10 @@
           logo: icon_砂浆.png
           url: https://www.drymt.com/
           description: 好用 第一选择
+        - title: 土小狐
+          logo: 狐狸.png
+          url: http://www.tuxiaohu.com/?gg
+          description: 好用 第二选择
         - title: 学兔兔
           logo: 兔子.png
           url: http://www.bzfxw.com/
