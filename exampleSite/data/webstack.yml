@@ -3,10 +3,10 @@
 - taxonomy: 常用网站
   icon: far fa-star
   links: 
-    - title: 我的笔记库
-      logo: 笔记.png
-      url: https://dzdnotes.pages.dev
-      description: 我的笔记库。 
+    - title: 网易邮箱
+      logo: 网易邮箱.png
+      url: https://mail.163.com/
+      description: 网易163邮箱。 
     - title: cloudflare
       logo: CloudflareCDN.png
       url: https://dash.cloudflare.com/
